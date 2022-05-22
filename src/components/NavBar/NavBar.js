@@ -1,4 +1,6 @@
-import "./NavBar.css"
+import "./NavBar.scss"
+import { FiShoppingCart } from 'react-icons/fi';
+
 
 export const Navegacion =  () => { 
      
@@ -18,7 +20,7 @@ export const Navegacion =  () => {
 
                 <li>Categortia 3</li>
             </ul>
-            
+            <FiShoppingCart/>
         </div>
     )
 }
