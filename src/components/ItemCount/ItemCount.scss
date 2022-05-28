@@ -1,0 +1,34 @@
+.containerCards{
+    display: flex;
+    justify-content: space-around;
+
+        .card{
+            width: 230px;
+            height: 490px;
+            align-items: center;
+            background-color: transparent;
+            border: 1px solid #000;
+        }
+
+          .cardsTitle{
+              font-size: 18px;
+          }
+
+            .imagCards{
+                width: 200px;
+            }
+
+            .precioCard{
+                padding: 10px;
+                font-weight: 700;
+            }
+
+            .buttons{
+                display: flex;
+                justify-content: space-between;
+                margin: 20px;
+            }
+}
+
+
+
