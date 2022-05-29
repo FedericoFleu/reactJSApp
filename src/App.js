@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/global.scss';
-import { Nav } from "./components/NavBar/NavBar"
+import { Navegacion } from "./components/NavBar/NavBar"
 import {ItemCount} from "./components/ItemCount/ItemCount"
 import s20Fe from "./assets/img/s20Fe.jpg"
 import s21Ultra from "./assets/img/S21Ultra.jpg"
@@ -28,8 +28,9 @@ function App() {
   return (
 
     <div className='app'>
-      <Nav/>
-      
+
+      <Navegacion/>
+
       <ItemCount nombre={product.nombre} img={product.img} precio={product.precio} />
       <ItemCount nombre={product2.nombre} img={product2.img} precio={product2.precio}/>
 
