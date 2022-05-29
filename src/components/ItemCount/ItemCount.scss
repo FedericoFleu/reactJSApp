@@ -1,33 +1,39 @@
-.containerCards{
-    display: flex;
-    justify-content: space-around;
+.cards{
+    width: 90%;
+    margin: auto;
+    text-align: center;
 
-        .card{
-            width: 230px;
-            height: 490px;
-            align-items: center;
-            background-color: transparent;
-            border: 1px solid #000;
+        .row{
+            margin-top: 3%;
+            // display: flex;
+            // justify-content: space-between;
         }
 
-          .cardsTitle{
-              font-size: 18px;
-          }
-
-            .imagCards{
-                width: 200px;
+            .card{
+                width: 230px;
+                height: 390px;
+                align-items: center;
+                background-color: transparent;
+                border: 1px solid #000;
             }
 
-            .precioCard{
-                padding: 10px;
-                font-weight: 700;
+            .cardsTitle{
+                font-size: 18px;
             }
 
-            .buttons{
-                display: flex;
-                justify-content: space-between;
-                margin: 20px;
-            }
+                .imagCards{
+                    width: 200px;
+                }
+
+                    .precioCard{
+                        font-weight: 700;
+                    }
+
+                        .buttons{
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 10px;
+                        }
 }
 
 

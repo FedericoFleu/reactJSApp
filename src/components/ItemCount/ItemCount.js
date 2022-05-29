@@ -1,51 +1,52 @@
 import "./ItemCount.scss"
 import { useState } from "react"
 
-
 export const ItemCount = ( {img, nombre, precio} ) =>{
 
-    const [estado, setEstado] = useState(0)
+    const [estado, setEstado] = useState(1)
  
     const agregar = () =>{
 
-       setEstado (estado + 1)
-
+        setEstado(estado + 1)
     }
 
     const quitar = () =>{
 
-        setEstado (estado - 1)
+        if (estado <= 0) {
+            return;
+          }
 
+        setEstado(estado - 1)
     }
 
     return (
-            <section className="containerCards container my-5">
+            <section className="cards">
 
-                <div className="card">
-                    <h3 className="cardsTitle">{nombre}</h3>
+                <div className="row">
 
-                    <img className="imagCards" alt="product imgaen" src={img} />
+                    <div className="card" > 
 
-                    <br/>
+                        <h3 className="cardsTitle">{nombre}</h3>
 
-                    <strong className="precioCard">{precio}</strong>
+                        <img className="imagCards" alt="product imgaen" src={img} />
 
-                    <div className="buttons">
-                        <button className="btn btn-danger" onClick={quitar}>-</button>
+                        <strong className="precioCard">{precio}</strong>
 
-                        <p className="cantProd">{estado}</p>
+                            <div className="buttons">
+                                    <button className="btn btn-danger" onClick={quitar}>-</button>
 
-                        <button className="btn btn-primary agregar" onClick={agregar}>+</button>
+                                    <p className="cantProd" >{estado}</p>
+
+                                    <button className="btn btn-primary agregar" onClick={agregar}>+</button>
+                            </div>
+
+                            <button className="btn btn-success carrito">Añadir al carrito</button>
+                        
                     </div>
-
-                    <button className="btn btn-success carrito">Añadir al carrito</button>
 
                 </div>
 
-                </section>
-            
-
-            
+        </section>
 
     )
 
