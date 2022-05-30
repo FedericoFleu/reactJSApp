@@ -2,24 +2,38 @@ import "./NavBar.scss"
 import { FiShoppingCart } from 'react-icons/fi';
 
 
-export const Navegacion = () => {
 
-    return (
-        <section className="navBarCointainer ">
+export const Nav = () => {
 
-            <a  href="index.html" target="_blank" rel="noreferrer" className="navBarLogo"><h1 >Tienda</h1></a>
+    return (  
+            <section className="header">
 
-            <ul className="navLinks">
+                <h1 className="navLogo">Tienda Logo</h1>
 
-                <a className="navLink" href="https://www.riiing.com.ar/categoria-producto/celulares/" target="_blank" rel="noreferrer"><li>Celulares</li></a>
+                    <div>
+                        <ul className="navBar">
 
-                <a className="navLink" href="https://www.riiing.com.ar/categoria-producto/audio-auriculares/" target="_blank" rel="noreferrer"><li>Accesorios</li></a>
-                
-                <a className="navLink" href="https://www.riiing.com.ar/categoria-producto/riiing/" target="_blank" rel="noreferrer"><li>Parlantes</li></a>
-            </ul>
+                            <li><a href="www.yotube.com.ar">Celulares</a></li>
 
-            <FiShoppingCart/>
+                            <li><a href="www.yotube.com.ar">Accesorios</a></li>
+
+                            <li><a href="www.yotube.com.ar">Parlantes</a></li>
+
+                            <li><a href="www.yotube.com.ar">Smartwatch</a></li>
+
+                            <FiShoppingCart/>
+                        </ul>
+                    </div>
+
+
+            
+
+            </section>
+
+
+
+            
        
-   </section>
+    
     )
 }

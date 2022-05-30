@@ -1,7 +1,7 @@
 import "./ItemCount.scss"
 import { useState } from "react"
 
-export const ItemCount = ( {img, nombre, precio} ) =>{
+export const ItemCount = (  ) =>{
 
     const [estado, setEstado] = useState(1)
  
@@ -20,31 +20,20 @@ export const ItemCount = ( {img, nombre, precio} ) =>{
     }
 
     return (
-            <section className="cards">
+            <section >
+                    <div className="buttons">
+                        <button className="btn btn-danger" onClick={quitar}>-</button>
 
-                <div className="row">
+                        <p className="cantProd" >{estado}</p>
 
-                    <div className="card" > 
-
-                        <h3 className="cardsTitle">{nombre}</h3>
-
-                        <img className="imagCards" alt="product imgaen" src={img} />
-
-                        <strong className="precioCard">{precio}</strong>
-
-                            <div className="buttons">
-                                    <button className="btn btn-danger" onClick={quitar}>-</button>
-
-                                    <p className="cantProd" >{estado}</p>
-
-                                    <button className="btn btn-primary agregar" onClick={agregar}>+</button>
+                         <button className="btn btn-primary agregar" onClick={agregar}>+</button>
                             </div>
 
                             <button className="btn btn-success carrito">Añadir al carrito</button>
                         
-                    </div>
+                   
 
-                </div>
+         
 
         </section>
 
