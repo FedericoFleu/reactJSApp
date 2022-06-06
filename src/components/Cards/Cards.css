@@ -1,0 +1,30 @@
+.cards {
+  width: 230px;
+  height: 390px;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #000;
+  margin: 20px;
+  transition: all 300ms;
+}
+.tituloCards {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.imgCards {
+  height: 210px;
+}
+
+.precioCards {
+  margin: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cards:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}

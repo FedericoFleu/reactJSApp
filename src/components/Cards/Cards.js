@@ -1,23 +1,19 @@
-import "./Cards.scss"
-// import { ItemCount } from "../ItemCount/ItemCount"
-
+import { Link } from "react-router-dom"
+import "./Cards.css"
+ 
 export const Cards = ({items}) =>{
 
     return (
-
         <div className="cards">
+                <img className="imgCards" alt="img Productos" src={items.img} />
 
-            <h2 className="tituloCards">{items.nombre}</h2>
+                <p className="tituloCards">{items.nombre}</p>
+                <hr/>
+                <strong className="precioCards">$ {items.precio}</strong>
 
-            <img className="imgCards" alt="img Productos" src={items.img} />
-
-            <strong>{items.precio}</strong>
-
-            {/* <div>
-                <ItemCount/>
-            </div> */}
-            <hr/>
-        </div>
-
+                <Link to={`/item/${items.id}`}>
+                    <button className="btn btn-primary">Comprar</button>
+                </Link>
+            </div>
     )
 }
