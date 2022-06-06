@@ -26,7 +26,7 @@ export const ItemDetailContainer = () => {
         .finally( ()=>{
             setLoading(false)
         })
-    }, [])
+    }, [itemId])
 
     return(
         
@@ -39,9 +39,7 @@ export const ItemDetailContainer = () => {
                     </Spinner> 
 
                     : <ItemDetail item={item}/>
-                    
             }
-            
         </section>
 
 
