@@ -1,6 +1,8 @@
 import "./ItemDetail.css"
+import { ItemCount } from "../ItemCount/ItemCount"
 
-export const ItemDetail = ({item}) =>{
+
+export const ItemDetail = ( {item} ) =>{
 
     return(
         <div className="itemDetail container my-5">
@@ -12,9 +14,11 @@ export const ItemDetail = ({item}) =>{
                 <h2>{item.nombre}</h2>
                 <p className="itemDescr">{item.descrip}</p>
 
+                <strong className="prodcPrecio">${item.precio}</strong>
                     <div className="precioItem">
-                        <strong className="prodcPrecio">${item.precio}</strong>
-                        <button className="btn btn-success">Añadir al carrito </button>
+                        <ItemCount
+                           max={item.stock}
+                        />
                     </div>
 
             </div>

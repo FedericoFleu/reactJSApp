@@ -1,0 +1,12 @@
+.buttons {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  font-size: 22px;
+}
+
+.cantText {
+  font-size: 25px;
+  font-weight: 600;
+}

@@ -1,32 +1,36 @@
-import "./ItemCount.scss"
+import "./ItemCount.css"
 import { useState } from "react"
  
-export const ItemCount = ( ) =>{
+export const ItemCount = ( {max} ) =>{
 
     const [estado, setEstado] = useState(1)
  
-    const agregar = () =>{
-
-            setEstado(estado + 1)
+    const handleSumar = () =>{
+            estado < max && setEstado(estado + 1)
     }
 
-    const quitar = () =>{
-
+    const handleRestar = () =>{
         estado > 1 && setEstado(estado - 1)
     }
 
+    const handleAgregar = () =>{
+        console.log("Añadido al carrito")
+    }
+
     return (
-            <section >
-                
-                    <div className="buttons">
-                        <button className="btnOpe btn-danger" onClick={quitar}>-</button>
+        <section >
+                <p className="cantText">Cantidad:</p>
 
-                        <p className="cantProd" >{estado}</p>
+                    <div className="my-3 buttons">  
+                        <button className="btn btn-outline-danger btnOpe" onClick={handleRestar}>-</button>
 
-                         <button className="btnOpe btn-success" onClick={agregar}>+</button>
+                        <span className="cantProd my-2" >{estado}</span>
+
+                        <button className="btn btn-outline-success btnOpe" onClick={handleSumar}>+</button>
+
                     </div>
 
-                    <button className="btn btn-success carrito">Añadir al carrito</button>
+                    <button className="btn btn-success btncCarrito" onClick={handleAgregar}>Añadir al carrito</button>
                         
         </section>
 

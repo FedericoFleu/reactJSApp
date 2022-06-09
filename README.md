@@ -1,3 +1,7 @@
+# Proyecto Ecommers Coder House con ReactJS
+
+En este proyecto vamos a intentar recrear un ecommers de una tienda de venta de celulares y accesorios para los mismos, teniendo una idea clara del producto final que queremos recrear para la entregar del proyecto final de la cursada.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

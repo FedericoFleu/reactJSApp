@@ -7,7 +7,6 @@ export const products = [
         descrip: "El Samsung Galaxy S22+ cuenta con una pantalla AMOLED de 6.6 pulgadas a resolución FHD+ y tasa de refresco de 120Hz, el Galaxy S22+ está potenciado por un procesador Snapdragon 8 Gen 1 o un Exynos 2200 dependiendo de la región, con 8GB de RAM y hasta 256GB de almacenamiento interno no expandible. La cámara principal del Galaxy S22+ es de 50MP y es complementada por una ultrawide de 12MP y una telefoto de 10MP con OIS, zoom 3x y IA. La cámara selfie en tanto es de 10MP. El Galaxy S22+ cuenta con una batería de 4500 mAh de carga rápida y completa sus características con parlantes stereo, certificación IP68 de resistencia al polvo y agua, lector de huellas bajo la pantalla y Android 12 con la interfaz One UI 4.1.",
         stock: 5,
         categoria: "celulares",
-        oferta: true
 
     },
     {
@@ -18,7 +17,6 @@ export const products = [
         descrip: "El Samsung Galaxy A52 cuenta con una pantalla Super AMOLED de 6.5 pulgadas, está potenciado por un procesador Snapdragon 720G con opciones de 4GB, 6GB o 8GB de memoria RAM y 128GB o 256GB de almacenamiento interno. Su batería es de 4500 mAh y tiene soporte para carga rápida, tiene lector de huellas integrado en pantalla y es resistente al polvo y agua. La cámara trasera del Galaxy A52 es cuádruple, con lentes de 64MP, 12MP, 5MP y 5MP, y la cámara para selfies es de 32 megapixels. Completando las características del Galaxy A52 encontramos unos parlantes stereo, y Android 11",
         stock: 0,
         categoria: "celulares",
-        oferta: false
     },
     {
         id: 3,
@@ -27,8 +25,7 @@ export const products = [
         precio: 102.999,
         descrip: "El Samsung Galaxy S20 FE es un nuevo miembro de la serie Galaxy S20, disponible en versiones 5G o LTE. El Galaxy S20 FE llega con una pantalla Super AMOLED de 6.5 pulgadas a resolución Full HD+ y potenciado por un procesador Exynos 990 con 6GB de memoria RAM y 128GB de almacenamiento interno expandible en el caso de la variante LTE mientras que la variante con conectividad 5G utiliza un procesador Snapdragon 865 con 8GB de RAM y 128GB o 256GB de almacenamiento. La cámara principal del Galaxy S20 FE es triple, con lentes de 12 MP, 8 MP y 12 MP, y la cámara frontal para selfies es de 32 megapixels. Completando las características del Galaxy S20 FE encontramos una batería de 4500 mAh de carga rápida, lector de huellas bajo pantalla, refresco de pantalla de 120 Hz, sonido de alta fidelidad, y corre Android 10 con la interfaz One UI 2.5.",
         stock: 6,
-        categoria: "celulares",
-        oferta: true
+        categoria: "celulares"
     },
     {
         id: 4,
@@ -37,8 +34,7 @@ export const products = [
         precio: 134.999,
         descrip: "El Samsung Galaxy S21 FE 5G. Se trata de un smartphone Android con una pantalla AMOLED FHD+ de 6.4 pulgadas con tasa de refresco de 120Hz. El Galaxy S21 FE llega en dos variantes: una con procesador Snapdragon 888 - para USA y Europa - y otra con chip Exynos 2100 - para mercados asiáticos - con 6GB o 8GB de RAM y 128GB o 256GB de almacenamiento interno. El conjunto de cámaras dorsal del Galaxy S21 FE consta de un sensor de 12MP con OIS, una cámara ultrawide de 12MP, y una cámara telefoto de 8MP con OIS, mientras que la cámara selfie es de 32MP. Alimentado por una batería de 4500 mAh de carga rápida, el Galaxy S21 FE 5G admite carga inalámbrica, cuenta con lector de huellas debajo de la pantalla, y llega con One UI 4 basado en Android 12 de fábrica.",
         stock: 0,
-        categoria: "celulares",
-        oferta: false
+        categoria: "celulares"
     },
     {
         id: 5,
@@ -46,9 +42,8 @@ export const products = [
         img: "../imgs/fundasSamsung.png", 
         precio: 999,
         descrip: "Fundas AntiShock Modelo Samsung",
-        stock: 0,
-        categoria: "accesorios",
-        oferta: false
+        stock: 20,
+        categoria: "accesorios"
     },
     {
         id: 6,
@@ -56,9 +51,8 @@ export const products = [
         img: "../imgs/cargador-tipo-c.jpg", 
         precio: 1.899,
         descrip: "Cargador USB Rapido Tipo C",
-        stock: 0,
-        categoria: "accesorios",
-        oferta: false
+        stock: 10,
+        categoria: "accesorios"
     },
     {
         id: 7,
@@ -67,8 +61,7 @@ export const products = [
         precio: 3.599,
         descrip: "Cargador original Samsung Rapido Tipo C",
         stock: 0,
-        categoria: "accesorios",
-        oferta: false
+        categoria: "accesorios"
     },
     {
         id: 8,
@@ -77,8 +70,7 @@ export const products = [
         precio: 999,
         descrip: "Cable usb Ring V8 premium",
         stock: 0,
-        categoria: "accesorios",
-        oferta: false
+        categoria: "accesorios"
     },
     {
         id: 9,
@@ -86,9 +78,8 @@ export const products = [
         img: "../imgs/auricualresSam.jpg", 
         precio: 2.799,
         descrip: "Auriculares Akg Samsung Negros ",
-        stock: 0,
+        stock: 3,
         categoria: "auriculares",
-        oferta: false
     },
     {
         id: 10,
@@ -96,9 +87,8 @@ export const products = [
         img: "../imgs/JBLC50BLACK_1.jpg", 
         precio: 1.999,
         descrip: "Auriculares JBL",
-        stock: 0,
+        stock: 2,
         categoria: "auriculares",
-        oferta: false
     },
     {
         id: 11,
@@ -107,8 +97,7 @@ export const products = [
         precio: 4.999,
         descrip: "Auriculares Inalambricos TWS I20 Plus",
         stock: 0,
-        categoria: "auriculares",
-        oferta: false
+        categoria: "auriculares"
     },
     {
         id: 12,
@@ -116,9 +105,8 @@ export const products = [
         img: "../imgs/aiwa.jpg", 
         precio: 2.999,
         descrip: "Auricualres Vincha Aiwa",
-        stock: 0,
-        categoria: "auriculares",
-        oferta: false
+        stock: 4,
+        categoria: "auriculares"
     },
 ]
 
