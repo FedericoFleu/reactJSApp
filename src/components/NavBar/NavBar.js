@@ -1,10 +1,10 @@
 import "./NavBar.css"
 import { Link } from "react-router-dom";
-import { FiShoppingCart } from 'react-icons/fi';
+import { CartWidget } from "../CartWidget/CartWidget";
+
 
 
 export const Nav = () => {
-
 
     return (  
             <header className="header">
@@ -15,8 +15,10 @@ export const Nav = () => {
                         <Link className="navLink" to={"/categorias/celulares"}>Celulares</Link>
                         <Link className="navLink" to={"/categorias/accesorios"}>Accesorios</Link>
                         <Link className="navLink" to={"/categorias/auriculares"}>Auriculares</Link>
-                        <FiShoppingCart className="iconCarrito"/>    
+                        
+                        <CartWidget/>
                     </nav>
+                        
                          
             </header>
 

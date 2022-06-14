@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import "./Cards.css"
 import { IoBagAddOutline } from 'react-icons/io5';
  
-export const Cards = ({items}) =>{
+export const Cards = ( {items} ) =>{
 
     return (
         <div className="cards">

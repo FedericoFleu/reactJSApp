@@ -1,36 +1,29 @@
 import "./ItemCount.css"
-import { useState } from "react"
  
-export const ItemCount = ( {max} ) =>{
+export const ItemCount = ( {max, setCounter, counter, handleAgregar} ) =>{
 
-    const [estado, setEstado] = useState(1)
- 
-    const handleSumar = () =>{
-            estado < max && setEstado(estado + 1)
-    }
+        const handleSumar = () =>{
+            counter < max && setCounter(counter + 1)
+        }
 
-    const handleRestar = () =>{
-        estado > 1 && setEstado(estado - 1)
-    }
-
-    const handleAgregar = () =>{
-        console.log("Añadido al carrito")
-    }
+        const handleRestar = () =>{
+            counter > 1 && setCounter(counter - 1)
+        }
 
     return (
-        <section >
-                <p className="cantText">Cantidad:</p>
+            <section >
+                    <p className="cantText">Cantidad:</p>
 
-                    <div className="my-3 buttons">  
-                        <button className="btn btn-outline-danger btnOpe" onClick={handleRestar}>-</button>
+                        <div className="my-3 buttons">  
+                            <button className="btn btn-outline-danger btnOpe" onClick={handleRestar}>-</button>
 
-                        <span className="cantProd my-2" >{estado}</span>
+                            <span className="cantProd my-2" >{counter}</span>
 
-                        <button className="btn btn-outline-success btnOpe" onClick={handleSumar}>+</button>
+                            <button className="btn btn-outline-success btnOpe" onClick={handleSumar}>+</button>
 
-                    </div>
+                        </div>
 
-                    <button className="btn btn-success btncCarrito" onClick={handleAgregar}>Añadir al carrito</button>
+                        <button className="btn btn-success btncCarrito" onClick={handleAgregar} >Añadir al carrito</button>
                         
         </section>
 
