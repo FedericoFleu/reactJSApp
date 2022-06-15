@@ -26,9 +26,21 @@ function App() {
     return cart.reduce( (acc, prod) => acc += (prod.precio * prod.cantidad), 0)
   }
 
+  const totalQuantity = () =>{
+    return cart.reduce( (acc,prod) => acc += prod.cantidad, 0) 
+  }
+
+  const empycart = () =>{
+    setCart([])
+  }
+
+  const removeItem = () =>{
+
+  }
+
   return (
 
-    <CartContext.Provider value={ {cart, addItem, isInCart, totalPrice} }>
+    <CartContext.Provider value={ {cart, addItem, isInCart, totalPrice, totalQuantity,empycart, removeItem} }>
 
       <BrowserRouter>
 
