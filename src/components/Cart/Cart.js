@@ -1,10 +1,9 @@
-import { useContext } from "react"
-import { CartContext } from "../../context/CartContext"
-// import { IoMdClose } from "react-icons/io"
+import { useCartContext } from "../../context/CartContext"
+import { IoMdClose } from "react-icons/io"
 
 export const Cart = () =>{
 
-    const {cart, totalPrice, empycart} = useContext(CartContext)
+    const {cart, totalPrice, removeItem ,empycart} = useCartContext()
 
     return(
         <div className="container my-5">
@@ -14,7 +13,7 @@ export const Cart = () =>{
             {
                 cart.map((item) => (
                 <div key={item.id} className="my-2">
-                    {/* <IoMdClose onClick={empycart} /> */}
+                    <IoMdClose onClick={() => removeItem(item.id)} />
                     <img className="imgCards" alt="img Productos" src={item.img} />
                     <h2>{item.nombre}</h2>
                     <p>Cantidad: {item.cantidad}</p>

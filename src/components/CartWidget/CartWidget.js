@@ -1,12 +1,11 @@
-import { FiShoppingCart } from 'react-icons/fi';
 import "./CartWidget.css"
+import { FiShoppingCart } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
+import { useCartContext } from '../../context/CartContext';
 
 export const CartWidget = () =>{
 
-    const {totalQuantity} = useContext(CartContext)
+    const {totalQuantity} = useCartContext()
 
     return(
         <div className='cart'>
