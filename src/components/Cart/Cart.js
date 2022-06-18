@@ -29,7 +29,7 @@ export const Cart = () =>{
             </div>
 
             <button onClick={empycart} className="btn btn-danger" >Vacias Carrito</button>
+
         </div>
     )
-
 } 
