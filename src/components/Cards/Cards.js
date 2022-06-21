@@ -6,11 +6,10 @@ export const Cards = ( {items} ) =>{
 
     return (
         <div className="cards">
-                
                 <img className="imgCards" alt="img Productos" src={items.img} />
-
                 <p className="tituloCards">{items.nombre}</p>
                 <hr/>
+
                 <div className="containerPrecio">
                     <strong className="precioCards">$ {items.precio}</strong>
 
@@ -18,7 +17,6 @@ export const Cards = ( {items} ) =>{
                         <button className="btn btn-dark"><IoBagAddOutline className="bag"/></button>
                     </Link>
                 </div>
-
             </div>
     )
 }

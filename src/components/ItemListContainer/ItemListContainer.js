@@ -10,7 +10,6 @@ export const ItemListContainer = () =>{
     const [loading, setLoading] = useState(true)
 
     const { categoryId } = useParams()
-    // console.log(categoryId)
    
     useEffect(() =>{
         setLoading(true)
@@ -32,22 +31,15 @@ export const ItemListContainer = () =>{
     }, [categoryId])
 
     return(
-        
         <section className="cardsContainer container my-5">
-
             {
                 loading 
                 ?   <Spinner animation="border" role="status" className="spiner">
                         <span className="visually-hidden"></span>
                     </Spinner> 
-
-                    : <ItemList items={items}/>
                     
+                : <ItemList items={items}/>
             }
-            
         </section>
-
-
     )
-
 }

@@ -1,6 +1,5 @@
 import { Cards } from "../Cards/Cards"
 
-
 export const ItemList = ( {items} ) =>{
 
     return(
@@ -12,6 +11,5 @@ export const ItemList = ( {items} ) =>{
                 items.map((items) => <Cards key={items.id} items={items} />)
             }
         </div>
-
     )
 }

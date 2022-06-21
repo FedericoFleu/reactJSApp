@@ -8,14 +8,12 @@ export const AppRouter = () =>{
 
     const {auth} = useAuthContext()
 
-    console.log(auth)
-
     return(
         <BrowserRouter>
           {
             auth.loggedIn 
             ? <PrivateRoutes />
-            :<PublicRoutes />
+            : <PublicRoutes />
           }
 
       </BrowserRouter>

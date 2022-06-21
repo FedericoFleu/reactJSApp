@@ -8,7 +8,7 @@ export const CartWidget = () =>{
     const {totalQuantity} = useCartContext()
 
     return(
-        <div className='cart'>
+        <div className={`cart ${totalQuantity() === 0 ? "widgetHidden" : ""}`}>
             <Link to="/cart">
                 <FiShoppingCart className="iconCarrito"/>
                 <span className='cantCart'>{totalQuantity()}</span>

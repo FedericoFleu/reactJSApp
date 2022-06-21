@@ -8,10 +8,13 @@ export const ItemDetail = ( {item} ) =>{
 
     const {addItem, isInCart} = useContext(CartContext)
 
-    const [cantidad, setCantidad] = useState(1)
+    const [cantidad, setCantidad] = useState(0)
 
     const handleAgregar = () =>{
-    const itemToCart = {
+
+        if (cantidad === 0) return
+
+        const itemToCart = {
             ...item,
             cantidad
         }
@@ -20,30 +23,27 @@ export const ItemDetail = ( {item} ) =>{
 
     return(
         <div className="itemDetail container my-5">
-
-        <img className="imgDetail" alt={item.nombre} src={item.img} />
+            <img className="imgDetail" alt={item.nombre} src={item.img} />
         
             <div className="dataPrd">
-
                 <h2>{item.nombre}</h2>
                 <p className="itemDescr">{item.descrip}</p>
                 <strong className="prodcPrecio">${item.precio}</strong>
-                    <div className="precioItem">
+
+                <div className="precioItem">
                     {
                         isInCart(item.id)
                         ? <Link to={"/cart"}><button className="btn btn-success">Finalizar mi compra</button></Link>
                         :
                         <ItemCount
-                           max={item.stock}
-                           counter = {cantidad}
-                           setCounter={setCantidad}
-                           handleAgregar ={handleAgregar}
+                        max={item.stock}
+                        counter = {cantidad}
+                        setCounter={setCantidad}
+                        handleAgregar ={handleAgregar}
                         />
-                    }
-                        
-                    </div>
+                    }          
+                </div>
             </div>
         </div>
-
     )
 }

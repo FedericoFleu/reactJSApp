@@ -9,8 +9,6 @@ export const Footer = () =>{
     })
 
     const handleInputChange = (e) =>{
-            console.log( e.target.name)
-
             setValues({
                 ...values,
                 [e.target.name]: e.target.value 
@@ -19,7 +17,6 @@ export const Footer = () =>{
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-        console.log(values)
     }
 
     return(

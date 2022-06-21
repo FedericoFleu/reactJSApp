@@ -10,12 +10,10 @@ export const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
-    // console.log(itemId)
-    // console.log(item)
    
     useEffect(() =>{
         setLoading(true)
-
+        //peticon de datos al MOCK
         pedirDatos()
             .then((resp)=> {
                 setItem( resp.find((item) => item.id === Number(itemId) ) )
@@ -29,20 +27,14 @@ export const ItemDetailContainer = () => {
     }, [itemId])
 
     return(
-        
         <section className="cardsContainer container my-5">
-
             {
                 loading 
                 ?   <Spinner animation="border" role="status" className="spiner">
                         <span className="visually-hidden"></span>
                     </Spinner> 
-
-                    : <ItemDetail item={item}/>
+                : <ItemDetail item={item}/>
             }
         </section>
-
-
     )
-
 }
