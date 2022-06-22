@@ -15,8 +15,8 @@ export const useAuthContext = () => {
 export const AuthProvider = ( {children} ) =>{
 
     const [auth, setAuth] = useState({
-        loggedIn: false,
-        userId: null
+        loggedIn: true,
+        userId: "fedefleurent@gmail.com"
     })
 
     const [error, setError] = useState([])

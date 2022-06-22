@@ -3,6 +3,8 @@ import { Spinner } from "react-bootstrap"
 import { useParams } from "react-router-dom"
 import { pedirDatos } from "../../mock/pedirDatos"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../../firebase/config"
 
 export const ItemDetailContainer = () => {
     
@@ -13,17 +15,17 @@ export const ItemDetailContainer = () => {
    
     useEffect(() =>{
         setLoading(true)
-        //peticon de datos al MOCK
-        pedirDatos()
-            .then((resp)=> {
-                setItem( resp.find((item) => item.id === Number(itemId) ) )
-        })
-        .catch( (error) =>{
-            console.log("ERROR",error)
-        })
-        .finally( ()=>{
-            setLoading(false)
-        })
+        
+        // 1- armar la referncia 
+       const docRef = doc(db, "productos", itemId)
+       //2-  llamar a firestone
+        getDoc(docRef)
+            .then((doc) =>{
+                setItem( { id: doc.id, ...doc.data()} )
+            })
+            .finally(() =>{
+                setLoading(false)
+            })
     }, [itemId])
 
     return(
