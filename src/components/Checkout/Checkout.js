@@ -75,8 +75,6 @@ export const Checkout = () =>{
         } else {
             alert("Hay items sin stock")
         }
-
-
     }
 
     if  (orderId) {
