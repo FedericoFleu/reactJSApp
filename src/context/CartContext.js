@@ -29,7 +29,7 @@ export const CartProvider = ( {children} ) =>{
       setCart( cart.filter((prod) => prod.id !== id ))
     }
     
-    const empycart = () =>{
+    const emptyCart = () =>{
       setCart( [] )
     }
 
@@ -42,7 +42,7 @@ export const CartProvider = ( {children} ) =>{
             totalPrice,
             totalQuantity,
             removeItem,
-            empycart 
+            emptyCart 
         } 
     }>
          {children}
