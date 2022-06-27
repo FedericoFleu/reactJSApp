@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react"
-import { Spinner } from "react-bootstrap"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../../firebase/config"
+import { Spinners } from "../Spinners/Spinners"
 
 export const ItemListContainer = () =>{
     
     const [items, setItems] = useState([])
+
     const [loading, setLoading] = useState(true)
 
     const { categoryId } = useParams()
@@ -39,9 +40,9 @@ export const ItemListContainer = () =>{
         <section className="cardsContainer container my-5">
             {
                 loading 
-                ?   <Spinner animation="border" role="status" className="spiner">
-                        <span className="visually-hidden"></span>
-                    </Spinner> 
+                ?   <div className="containerSpinner">
+                        <Spinners/>
+                    </div> 
                     
                 : <ItemList items={items}/>
             }

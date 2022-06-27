@@ -42,7 +42,7 @@ export const ItemCount = ( {max, setCounter, counter, handleAgregar} ) =>{
                     </button>
                 </div>
                 
-                <button disabled={counter === 0} className="btn btn-success btncCarrito" onClick={handleAgregar} >Añadir al carrito</button>    
+                <button disabled={counter === 0} className="btn btn-outline-dark btncCarrito" onClick={handleAgregar} >Añadir al carrito</button>    
             </div>
     )
 }

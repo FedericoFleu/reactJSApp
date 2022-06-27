@@ -33,7 +33,10 @@ export const ItemDetail = ( {item} ) =>{
                 <div className="precioItem">
                     {
                         isInCart(item.id)
-                        ? <Link to={"/cart"}><button className="btn btn-success">Finalizar mi compra</button></Link>
+                        ? <div>
+                            <Link to={"/cart"}><button className="btn btn-outline-dark mx-3">Finalizar mi compra</button></Link>
+                            <Link to={"/"}><button className="btn btn-outline-dark">Seguir Comprando</button></Link>
+                        </div>
                         :
                         <ItemCount
                         max={item.stock}
@@ -42,6 +45,7 @@ export const ItemDetail = ( {item} ) =>{
                         handleAgregar ={handleAgregar}
                         />
                     }          
+                    
                 </div>
             </div>
         </div>

@@ -1,20 +1,19 @@
-.cart {
-  font-size: 30px;
-  color: black;
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.35 esse-in-out;
-}
-
 .iconCarrito {
-  color: black;
+  color: #fff;
+  font-size: 30px;
 }
 
-.cantCart {
-  color: black;
+.totalCart {
+  font-size: 18px;
+  margin: -15px 40px 0 0;
+  z-index: 999;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0 5px;
+  position: absolute;
+  color: #000;
 }
 
-.widgetHidden {
-  visibility: hidden;
-  opacity: 0;
+.hidden {
+  display: none;
 }

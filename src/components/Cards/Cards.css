@@ -2,7 +2,7 @@
   width: 230px;
   height: 370px;
   align-items: center;
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #000;
   margin: 20px;
   transition: all 300ms;
@@ -12,22 +12,28 @@
   text-align: center;
   font-size: 18px;
   font-weight: 600;
+  color: #000;
 }
 
 .imgCards {
+  justify-content: center;
   height: 210px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  border: none;
 }
 
 .containerPrecio {
   display: flex;
   justify-content: space-around;
+  color: #000;
 }
 
 .precioCards {
   margin: 5px;
   font-size: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 .bag {
@@ -37,4 +43,13 @@
 .cards:hover {
   opacity: 0.8;
   transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  background-color: #000;
+  color: #000;
 }

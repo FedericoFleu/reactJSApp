@@ -4,6 +4,7 @@ import { CartWidget } from "../CartWidget/CartWidget";
 
 
 
+
 export const Nav = () => {
 
     return (  
@@ -14,8 +15,8 @@ export const Nav = () => {
         <Link className="navLink" to={"/categorias/celulares"}>Celulares</Link>
         <Link className="navLink" to={"/categorias/accesorios"}>Accesorios</Link>
         <Link className="navLink" to={"/categorias/auriculares"}>Auriculares</Link>
-        <CartWidget/>                
-        </nav>               
+        <CartWidget/>  
+        </nav>          
     </header>
     )
 }

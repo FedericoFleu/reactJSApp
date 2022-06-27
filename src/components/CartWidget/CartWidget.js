@@ -8,11 +8,14 @@ export const CartWidget = () =>{
     const {totalQuantity} = useCartContext()
 
     return(
-        <div className={`cart ${totalQuantity() === 0 ? "widgetHidden" : ""}`}>
-            <Link to="/cart">
-                <FiShoppingCart className="iconCarrito"/>
-                <span className='cantCart'>{totalQuantity()}</span>
-            </Link>
-        </div>
+        <div>
+        <Link to="/cart">
+            <FiShoppingCart className="iconCarrito"/>
+            <span className={`totalCart ${totalQuantity() === 0 ? "hidden" : ""}`}>{totalQuantity()}</span>
+        </Link>
+
+
+    </div>
     )
 }
+

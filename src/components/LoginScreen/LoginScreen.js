@@ -49,10 +49,8 @@ export const LoginScreen = () =>{
                         className="form-control my-4"
                     />
                     {error.password && <small className='text-danger'>{error.password}</small>}
-
-                    <br/>
                     
-                    <button type='submit' className='btn btn-primary'>Enviar</button>
+                    <button type='submit' className='btn btn-dark btnLogin'>Enviar</button>
                 </form>
             </div>
     </div>

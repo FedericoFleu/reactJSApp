@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
-import { Spinner } from "react-bootstrap"
 import { useParams } from "react-router-dom"
-import { pedirDatos } from "../../mock/pedirDatos"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { doc, getDoc } from "firebase/firestore"
 import { db } from "../../firebase/config"
+import { Spinners } from "../Spinners/Spinners"
 
 export const ItemDetailContainer = () => {
     
@@ -32,9 +31,9 @@ export const ItemDetailContainer = () => {
         <section className="cardsContainer container my-5">
             {
                 loading 
-                ?   <Spinner animation="border" role="status" className="spiner">
-                        <span className="visually-hidden"></span>
-                    </Spinner> 
+                ?   <div className="containerSpinner">
+                        <Spinners/>
+                    </div> 
                 : <ItemDetail item={item}/>
             }
         </section>

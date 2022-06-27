@@ -1,13 +1,22 @@
 import { Link } from "react-router-dom"
+import "./EmptyCart.css"
+import { BsCartX } from 'react-icons/bs';
 
 export const EmptyCart = () =>{
 
     return(
         <div className="container my-5">
-            <h3>Tu carrito esta vacio</h3>
+            <h2>Carrito de la compra</h2>
             <hr/>
 
-            <Link to="/" className="btn btn-primary">Iniciar tu compra</Link>
+            <div className="titleProd emptyContainer">
+                <BsCartX className="iconCartEmpty"/>
+                <p className="cartEmptyText">Carrito vacío.</p>
+            </div>
+
+            <div className="containerEmpty">
+                <Link to="/" className="btn btn-outline-dark empty">Seguir Comprando</Link>
+            </div>
         </div>
     )
 }

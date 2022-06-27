@@ -7,7 +7,7 @@ export const UserInfo = () =>{
     return(
         <div className="container d-flex justify-content-between p-2">
             <p>Bienvenido, {auth.userId}</p>
-            <button onClick={logOut} className="btn btn-danger" >LogOut</button>
+            <button onClick={logOut} className="btn btn-outline-dark" >Log Out</button>
         </div>
     )
 }

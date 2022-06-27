@@ -123,26 +123,13 @@ export const Checkout = () =>{
                     placeholder= "Tu dirección"
                     className="form-control my-3"
                 />
-                <button type="submit" className="btn btn-primary">Enviar</button>
+                <button type="submit" className="btn btn-dark">Enviar</button>
             </form>
             
-                <button onClick={emptyCart} className="btn btn-danger my-2">Cancelar mi compra</button>
+                <button onClick={emptyCart} className="btn btn-outline-dark my-2">Cancelar mi compra</button>
         </div>  
     )
 }
 
-// cart.forEach((item) => {
-//     const docRef = doc(db, "productos", item.id)
 
-//     getDoc(docRef)
-//         .then((doc) => {
-//             if ((doc.data().stock - item.cantidad) >= 0) {
-//                 updateDoc(docRef, {
-//                     stock: doc.data().stock - item.cantidad
-//                 })
-//             } else {
-//                 alert("No hay mas productos en stock del producto: " + item.nombre)
-//             }
-//         }) 
-// })
 
