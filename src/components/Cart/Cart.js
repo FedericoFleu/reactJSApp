@@ -1,6 +1,6 @@
 import { useCartContext } from "../../context/CartContext"
 import { IoMdClose } from "react-icons/io"
-import { EmptyCart } from "./EmptyCart"
+import { EmptyCart } from "../EmptyCart/EmptyCart"
 import { Link } from "react-router-dom";
 import "./Cart.css"
 
@@ -17,14 +17,14 @@ export const Cart = () =>{
 
             {
             cart.map((item) => (
-
+                
             <div key={item.id} className="my-2 container">
                 <div className="containerCart">
                     <IoMdClose className="iconRemove" onClick={() => removeItem(item.id)} />
                     <img className="imgCardsCart" alt={item.nombre} src={item.img} />
-                    <h2>{item.nombre}</h2>
-                    <p>Cantidad: {item.cantidad}</p>
-                    <p className="prodPre">Precio: ${item.precio * item.cantidad}</p>
+                    <h2 className="titleCartProd">{item.nombre}</h2>
+                    <strong>Cantidad: {item.cantidad}</strong>
+                    <strong className="prodPre">Precio: ${item.precio * item.cantidad}</strong>
                     <hr/>
                 </div>
                 <hr/>
@@ -33,12 +33,14 @@ export const Cart = () =>{
             }
 
             <div className="container my-5 detail">
-                <strong className="totalCart">Total del Carrito: ${totalPrice()}</strong>       
+                <strong>Total del Carrito: ${totalPrice()}</strong>       
             </div>
 
-            <button onClick={emptyCart} className="btn btn-outline-dark">Vaciar Carrito</button>
+            <div className="buttonsDetail">
+                <button onClick={emptyCart} className="btn btn-outline-dark">Vaciar Carrito</button>
+                <Link to={"/checkout"} className="btn btn-dark mx-4">Finalizar mi compra</Link>
+            </div>
 
-            <Link to={"/checkout"} className="btn btn-dark mx-4">Terminar mi compra</Link>
         </div>
     )
 } 

@@ -15,7 +15,7 @@ export const EmptyCart = () =>{
             </div>
 
             <div className="containerEmpty">
-                <Link to="/" className="btn btn-outline-dark empty">Seguir Comprando</Link>
+                <Link to="/" className="btn btn-outline-dark empty">Ir a comprar</Link>
             </div>
         </div>
     )

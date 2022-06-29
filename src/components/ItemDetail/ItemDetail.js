@@ -34,8 +34,8 @@ export const ItemDetail = ( {item} ) =>{
                     {
                         isInCart(item.id)
                         ? <div>
-                            <Link to={"/cart"}><button className="btn btn-outline-dark mx-3">Finalizar mi compra</button></Link>
-                            <Link to={"/"}><button className="btn btn-outline-dark">Seguir Comprando</button></Link>
+                            <Link to={"/"}><button className="btn btn-outline-dark mx-3">Seguir Comprando</button></Link>
+                            <Link to={"/cart"}><button className="btn btn-outline-dark ">Finalizar mi compra</button></Link>
                         </div>
                         :
                         <ItemCount

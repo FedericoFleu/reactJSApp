@@ -1,6 +1,7 @@
 .containerCart {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .iconRemove {
@@ -10,23 +11,30 @@
   justify-content: center;
 }
 
-.detail {
-  display: flex;
-  height: 50%;
-}
-
 .imgCardsCart {
   display: flex;
   justify-content: center;
-  justify-content: center;
-  height: 210px;
+  align-items: center;
+  height: 150px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 100%;
   border: none;
 }
 
-.totalCart {
+.titleCartProd {
   font-size: 20px;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  font-size: 20px;
+}
+
+.buttonsDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
