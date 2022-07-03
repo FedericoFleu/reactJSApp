@@ -3,7 +3,8 @@ import { useCartContext } from "../../context/CartContext"
 import { Navigate } from "react-router-dom"
 import { collection, getDocs, addDoc, writeBatch, query, where, documentId} from "firebase/firestore"
 import { db } from "../../firebase/config"
-import { Formik } from 'formik';
+import { Formik, Form} from 'formik';
+import { TextField } from "../LoginScreen/TextFiled"
 import * as Yup from "yup"
 
 const schema = Yup.object().shape({
@@ -16,12 +17,11 @@ const schema = Yup.object().shape({
                 .required("Este campo es obligatorio")
                 .email("Fomarto de email ivalido, usar ej: example@gmail.com"),
     direccion: Yup.string()
-                    .required("Este campo es obligatorio")
-                    .min(4, "La direccion es demasiado corto")
-                    .max(40, "Maximo 40 caracteres"),
+                .required("Este campo es obligatorio")
+                .min(4, "La direccion es demasiado corto")
+                .max(40, "Maximo 40 caracteres"),
 
 })
-
 
 export const Checkout = () =>{
 
@@ -92,48 +92,45 @@ export const Checkout = () =>{
                 initialValues={ {
                     nombreCom: "",
                     email: "",
-                    password: ""
+                    direccion: ""
                 } }
 
                 onSubmit={generarOrder}
                 validationSchema={schema}
             >
                   {(formik) => (
-                    <form onSubmit={formik.handleSubmit}>
-                        <input
+                    <Form onSubmit={formik.handleSubmit}>
+                        <TextField
+                            label="Nombre Completo"
                             value={formik.values.nombre}
                             name="nombre"
                             onChange={formik.handleChange}
                             type={"text"}
                             placeholder="Nombre Completo"
-                            className="form-control my-2"
                         />  
-                        {formik.errors.nombre && <p className="alert alert-danger">{formik.errors.nombre}</p>}
 
-                        <input
+                        <TextField
+                            label="Email"
                             value={formik.values.email}
                             name="email"
                             onChange={formik.handleChange}
-                            type={"text"}
+                            type={"email"}
                             placeholder="email@example.com"
-                            className="form-control my-2"
                         />
-                        {formik.errors.email && <p className="alert alert-danger">{formik.errors.email}</p>}
 
-                        <input
+                        <TextField
+                            label="Dirrecion de Envio"
                             value={formik.values.direccion}
                             name="direccion"
                             onChange={formik.handleChange}
                             type={"text"}
                             placeholder="Dirrecion Completa"
-                            className="form-control my-2"
                         />
-                        {formik.errors.direccion && <p className="alert alert-danger">{formik.errors.direccion}</p>}
-
-                        <button type="submit" className="btn btn-dark mx-2">Enviar</button>
 
                         <button onClick={emptyCart} className="btn btn-outline-dark my-2">Cancelar mi compra</button>
-                    </form>
+                        
+                        <button type="submit" className="btn btn-dark mx-2">Enviar</button>
+                </Form>
                 )}
             </Formik>
         </div>  

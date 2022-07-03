@@ -11,7 +11,7 @@ export const CartWidget = () =>{
         <div>
         <Link to="/cart">
             <FiShoppingCart className="iconCarrito"/>
-            <span className={`totalCart ${totalQuantity() === 0 ? "hidden" : ""}`}>{totalQuantity()}</span>
+            <span className={`totalCart ${totalQuantity() === 0 ? "hidden" : " "}`}>{totalQuantity()}</span>
         </Link>
 
 

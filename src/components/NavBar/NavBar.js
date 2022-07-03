@@ -2,9 +2,6 @@ import "./NavBar.css"
 import { Link } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 
-
-
-
 export const Nav = () => {
 
     return (  
@@ -20,3 +17,4 @@ export const Nav = () => {
     </header>
     )
 }
+

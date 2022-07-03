@@ -3,6 +3,12 @@
   font-size: 30px;
 }
 
+.iconCarrito:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(89, 89, 102);
+}
+
 .totalCart {
   font-size: 18px;
   margin: -15px 40px 0 0;

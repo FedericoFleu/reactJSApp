@@ -19,7 +19,7 @@
   padding-left: 50px;
   cursor: pointer;
   text-decoration: none;
-  color: #000;
+  color: rgb(89, 89, 102);
 }
 
 .navLinks {
@@ -37,6 +37,6 @@
 }
 
 .navLink:hover {
-  color: #000;
+  color: rgb(89, 89, 102);
   text-decoration: none;
 }

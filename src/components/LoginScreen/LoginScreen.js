@@ -1,58 +1,61 @@
-import {  useState } from "react"
 import { useAuthContext } from "../../context/AuthContext"
 import "./LoginScreen.css"
+import { Formik, Form } from "formik"
+import { TextField } from "./TextFiled"
+import * as Yup from "yup"
 
 export const LoginScreen = () =>{
 
-    const {login, error} = useAuthContext()
+    const validate = Yup.object().shape({
 
-    const [values, setValues] = useState({
-        email: '',
-        password: ''
+        fullName: Yup.string()
+                    .required("Campo requerido")
+                    .min(5, "El nombre completo es demasiado corto")
+                    .max(25, "Maximo 30 caracteres"),
+        email: Yup.string()
+                    .required("Campo requerido")
+                    .email("Usar ej: example@gmail.com"),
+        password: Yup.string()
+                    .required("Campo requerido")
+                    .min(6, "Ingrese 6 caracteres o mas"),
+        confirmPassword: Yup.string()
+                    .required("Campo requerido")
+                    .oneOf([Yup.ref("password"), null], "Las contraseñas deben concidir")
     })
 
-    const handleInputChange = (e) => {
-        setValues({
-            ...values,
-            [e.target.name]: e.target.value
-        })
-    }
+    const {login} = useAuthContext()
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
+    const handleSubmit = (values) => {
         login(values)
     }
 
     return(
-        <div className="loginScreen">
-            <div className="loginContainer">
-                <h3>Login</h3>
-                <hr/>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type={"email"} 
-                        name="email"
-                        value={values.email}
-                        onChange={handleInputChange}
-                        placeholder='Email de usuario'
-                        className="form-control my-4"
-                    />
-                    {error.email && <small className='text-danger'>{error.email}</small>}
-
-                    <input
-                        type={"password"} 
-                        name="password"
-                        value={values.password}
-                        onChange={handleInputChange}
-                        placeholder='Contraseña'
-                        className="form-control my-4"
-                    />
-                    {error.password && <small className='text-danger'>{error.password}</small>}
-                    
-                    <button type='submit' className='btn btn-dark btnLogin'>Enviar</button>
-                </form>
+        <div className="signUp">
+            <div className="signUpContainer">
+                <Formik
+                    initialValues={{
+                        fullName: "",
+                        email: "",
+                        password: "",
+                        confirmPassword: ""
+                    }}
+                    validationSchema={validate}
+                    onSubmit={handleSubmit}
+                    >
+                    {(formik) => (
+                        <div>
+                            <h2 className="my-4 titleSingUp">Sign Up</h2>
+                            <Form>
+                                <TextField label="Nombre Completo" name="fullName" type="text" placeholder="Nombre Completo"/>
+                                <TextField label="Email" name="email" type="email" placeholder="email@example.com"/>
+                                <TextField label="Contraseña" name="password" type="password" placeholder="Contaseña"/>
+                                <TextField label="Repetir contraseña" name="confirmPassword" type="password" placeholder="Repetir contaseña"/>
+                                <button className="btn btn-dark" type="submit">Iniciar Sesion</button>
+                            </Form>
+                        </div>
+                    )}
+                </Formik>
             </div>
-    </div>
+        </div>
     )
 }
