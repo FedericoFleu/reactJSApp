@@ -1,6 +1,18 @@
 # Proyecto Ecommers Coder House con ReactJS
 
-En este proyecto vamos a intentar recrear un ecommers de una tienda de venta de celulares y accesorios para los mismos, teniendo una idea clara del producto final que queremos recrear para la entregar del proyecto final de la cursada.
+En este proyecto vamos a intentar recrear una aplicación ecommers con React JS, intento asimilar todo lo aprendido en el curso de coder React JS, anteriormente habiendo cursando el de desarrollo web y JavaScript. El ecommers tiene una temática de venta de celulares y accesorios, teniendo una idea clara del producto final que queremos lograr para la entregar del proyecto final.
+
+## Funciones del proyecto
+
+Al iniciar vas a tener el inicio que simula el registro del usuario, donde ingresas tus datos y te logeas, dentro de la app vas a poder navegar, ver las distintas secciones, agregar productos al carrito, borrar productos del carrito, vaciar el carrito, simular una compra que genere un id de orden que queda cargado en firebase.
+
+### Datos de ingreso
+
+email: fedef@gmail.com, pass: Fede1234.
+
+### Tecnologías utilizadas
+
+React JS, JSX, (CSS, Bootstrap 5) => {estilos del proyecto}, Formik y Yup para validar los formularios, Firebase para usar los datos y guardar lar ordenes que genera el usuario.
 
 # Getting Started with Create React App
 

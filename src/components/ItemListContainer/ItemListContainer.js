@@ -1,10 +1,7 @@
-// import { useEffect, useState } from "react"
+import { Footer } from "../Footer/Footer"
 import { ItemList } from "../ItemList/ItemList"
-// import { useParams } from "react-router-dom"
-// import { collection, getDocs, query, where } from "firebase/firestore"
-// import { db } from "../../firebase/config"
 import { Spinners } from "../Spinners/Spinners"
-import { useProducts } from "./useProducts"
+import { useProducts } from "../../Hooks/useProducts"
 
 export const ItemListContainer = () =>{
 
@@ -19,6 +16,8 @@ export const ItemListContainer = () =>{
                     </div> 
                 : <ItemList items={items}/>
             }
+            
+            <Footer/>
         </section>
     )
 }

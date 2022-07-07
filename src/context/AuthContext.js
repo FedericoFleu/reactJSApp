@@ -1,9 +1,9 @@
 import { createContext, useContext, useState } from "react"
 
 const mockUsers = [
-    {email: "fedefleurent@gmail.com", pass: "Fede1234"},
-    {email: "silfleurent@gmail.com", pass: "Sil1234"},
-    {email: "jose@gmail.com", pass: "Jose1234"}
+    {email: "fedef@gmail.com", pass: "Fede1234"},
+    {email: "silf@gmail.com", pass: "Sil1234"},
+    {email: "josef@gmail.com", pass: "Jose1234"}
 ]
 
 export const AuthContext = createContext()
@@ -15,8 +15,8 @@ export const useAuthContext = () => {
 export const AuthProvider = ( {children} ) =>{
 
     const [auth, setAuth] = useState({
-        loggedIn: true,
-        userId: "fedefleurent@gmail.com"
+        loggedIn: false,
+        userId: null
     })
 
     const [error, setError] = useState([])

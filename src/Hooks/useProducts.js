@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { collection, getDocs, query, where } from "firebase/firestore"
-import { db } from "../../firebase/config"
+import { db } from "../firebase/config"
 
 
 export const useProducts = () =>{

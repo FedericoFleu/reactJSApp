@@ -11,15 +11,20 @@ export const PrivateRoutes = () =>{
     return(
         <>
             <Nav/>
-            <UserInfo />
-                <Routes>
-                    <Route path='/' element={ <ItemListContainer/> } />
-                    <Route path='/categorias/:categoryId' element={ <ItemListContainer/> } />
-                    <Route path='/item/:itemId' element={ <ItemDetailContainer/> } /> 
-                    <Route path='/cart' element={ <Cart/> } />
-                    <Route path='/checkout' element={ <Checkout/> } />  
-                    <Route path='*' element={ <Navigate to={"/"}/> } />
-                </Routes>
+                <UserInfo />
+                    <Routes>
+                        <Route path='/' element={ <ItemListContainer/> } />
+
+                        <Route path='/categorias/:categoryId' element={ <ItemListContainer/> } />
+
+                        <Route path='/item/:itemId' element={ <ItemDetailContainer/> } /> 
+
+                        <Route path='/cart' element={ <Cart/> } />
+
+                        <Route path='/checkout' element={ <Checkout/> } />  
+
+                        <Route path='*' element={ <Navigate to={"/"}/> } />
+                    </Routes>
         </>
     )
 }

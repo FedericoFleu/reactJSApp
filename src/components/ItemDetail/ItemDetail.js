@@ -1,23 +1,25 @@
 import "./ItemDetail.css"
 import { ItemCount } from "../ItemCount/ItemCount"
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
+import { useCounter } from "../../Hooks/useCounter"
 
 export const ItemDetail = ( {item} ) =>{
 
     const {addItem, isInCart} = useContext(CartContext)
 
-    const [cantidad, setCantidad] = useState(0)
+    const {counter, handleSumar, handleRestar} = useCounter(0, item.stock)
 
     const handleAgregar = () =>{
 
-        if (cantidad === 0) return
+        if (counter === 0) return
 
         const itemToCart = {
             ...item,
-            cantidad
+            cantidad: counter
         }
+
         addItem(itemToCart) 
     }
 
@@ -40,12 +42,12 @@ export const ItemDetail = ( {item} ) =>{
                         :
                         <ItemCount
                         max={item.stock}
-                        counter = {cantidad}
-                        setCounter={setCantidad}
+                        counter = {counter}
+                        handleSumar = {handleSumar}
+                        handleRestar = {handleRestar}
                         handleAgregar ={handleAgregar}
                         />
-                    }          
-                    
+                    }           
                 </div>
             </div>
         </div>

@@ -1,21 +1,17 @@
 import { BrowserRouter } from "react-router-dom"
-import { useAuthContext } from "../context/AuthContext";
 import { PrivateRoutes } from "./PrivateRoutes";
 import { PublicRoutes } from "./PublicRoutes";
-
+import { useAuthContext } from "../context/AuthContext";
 
 export const AppRouter = () =>{
 
-    const {auth} = useAuthContext()
+  const {auth} = useAuthContext()
 
     return(
         <BrowserRouter>
           {
-            auth.loggedIn 
-            ? <PrivateRoutes />
-            : <PublicRoutes />
+            auth.loggedIn ? <PrivateRoutes /> : <PublicRoutes />
           }
-
       </BrowserRouter>
     )
 } 

@@ -16,9 +16,10 @@ export const Cart = () =>{
             <hr/>
 
             {
-            cart.map((item) => (
+            cart.map( (item) => (
                 
             <div key={item.id} className="my-2 container">
+
                 <div className="containerCart">
                     <IoMdClose className="iconRemove" onClick={() => removeItem(item.id)} />
                     <img className="imgCardsCart" alt={item.nombre} src={item.img} />
@@ -28,6 +29,7 @@ export const Cart = () =>{
                     <hr/>
                 </div>
                 <hr/>
+                
             </div>))
             }
 

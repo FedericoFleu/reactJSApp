@@ -2,14 +2,15 @@ import { useState } from "react"
 import { useCartContext } from "../../context/CartContext"
 import { Navigate } from "react-router-dom"
 import { collection, getDocs, addDoc, writeBatch, query, where, documentId} from "firebase/firestore"
-import { db } from "../../firebase/config"
 import { Formik, Form} from 'formik';
 import { TextField } from "../LoginScreen/TextFiled"
 import * as Yup from "yup"
+import { Link } from "react-router-dom"
+import { db } from "../../firebase/config"
 
 const schema = Yup.object().shape({
     
-    nombre: Yup.string()
+    nombreCom: Yup.string()
                 .required("Este campo es obligatorio")
                 .min(5, "El nombre completo es demasiado corto")
                 .max(30, "Maximo 30 caracteres"),
@@ -75,6 +76,10 @@ export const Checkout = () =>{
                 <h3>Gracias por su compra!</h3>
                 <hr/>
                 <p>Su numero de orden es : {orderId}</p>
+
+                <div className="containerEmpty">
+                    <Link to="/" className="btn btn-outline-dark empty">Volver al inicio</Link>
+                </div>
             </div>
         )
     }
@@ -100,10 +105,11 @@ export const Checkout = () =>{
             >
                   {(formik) => (
                     <Form onSubmit={formik.handleSubmit}>
+                        
                         <TextField
                             label="Nombre Completo"
                             value={formik.values.nombre}
-                            name="nombre"
+                            name="nombreCom"
                             onChange={formik.handleChange}
                             type={"text"}
                             placeholder="Nombre Completo"
